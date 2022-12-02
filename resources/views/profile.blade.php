@@ -9,7 +9,7 @@
         <div class="container">
             <div class="content">
                 <h1>Мои объявления</h1>
-                <a href="" class="btn">Создать объявление</a>
+                <a href="{{ route('bb.create') }}" class="btn">Создать объявление</a>
                 @if ( count($bbs) )
                     <table class="bb-table">
                         <tr>
@@ -22,8 +22,8 @@
                                 <td><h4>{{ $bb->title }}</h4></td>
                                 <td>{{ $bb->content }}</td>
                                 <td>{{ $bb->price }}</td>
-                                <td><a href="">Редактировать</a></td>
-                                <td><a href="">Удалить</a></td>
+                                <td><a href="{{ route('bb.edit', ['bb' => $bb]) }}">Редактировать</a></td>
+                                <td><a href="{{ route('bb.delete', ['bb' => $bb]) }}">Удалить</a></td>
                             </tr>
                         @endforeach
                     </table>
