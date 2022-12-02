@@ -1,0 +1,44 @@
+header {
+    background: #252525;
+}
+
+.navbar {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar a + a {
+    margin-left: 20px;
+}
+
+.navbar a + form {
+    margin-left: 10px;
+}
+
+.navbar form {
+    display: inline;
+}
+
+.btn-nav {
+    height: 30px;
+    padding: 0 10px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    background: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+.btn-nav:hover {
+    cursor: pointer;
+    background: #fff;
+    color: #000;
+}

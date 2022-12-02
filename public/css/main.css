@@ -9,9 +9,31 @@
     padding: 0;
 }
 
+a, button, .btn, .btn-nav {
+    text-decoration: none;
+    transition: .2s;
+}
+
+a:hover, button:hover, .btn:hover, .btn-nav:hover {
+    transition: .2s;
+}
+
+a:hover {
+    opacity: .6;
+}
+
+
 .container {
     width: 900px;
     margin: 0 auto;
+}
+
+main {
+    margin-top: 20px;
+}
+
+main h1 {
+    margin-bottom: 10px;
 }
 
 .bb {
@@ -23,18 +45,35 @@
 }
 
 .bb-table {
+    width: 100%;
 }
 
 .bb-table tr:nth-child(even) {
-    background: #d8e8f5;
+    background: #e9eeff;
 }
 
-.bb-table td:nth-child(1) {
-    padding-right: 20px;
+.bb-table td:first-child {
+    padding-left: 6px;
+    padding-right: 16px;
 }
 
-.bb-table td + td {
-    padding: 5px 20px;
+.bb-table td {
+    padding: 6px 0px 6px 6px;
 }
 
+.btn {
+    display: inline-block;
+    padding: 8px 14px;
+    border: 0;
+    border-radius: 4px;
+    background: #1d53ff;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+}
 
+.btn:hover {
+    cursor: pointer;
+    background: #000000;
+    color: #ffffff;
+}

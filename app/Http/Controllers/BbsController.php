@@ -11,7 +11,7 @@ class BbsController extends Controller
     public static function index()
     {
         return view('index', [
-            'bbs' => Bb::all()
+            'bbs' => Bb::latest()->get()
         ]);
     }
 
