@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/forms.css">
     <title>@yield('title')</title>
 </head>
 <body>
@@ -18,16 +19,17 @@
                 <a href="{{ route('home') }}">Пылито.ру</a>
             </div>
             <div class="navbar-right">
-                @if ( Auth::guest() )
+                @guest
                     <a href="{{ route('login') }}">Вход</a>
                     <a href="{{ route('register') }}">Регистрация</a>
-                @else
+                @endguest
+                @auth
                     <a href="{{ route('profile') }}">Профиль</a>
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf
                         <input type="submit" class="btn-nav" value="Выйти">
                     </form>
-                @endif
+                @endauth
             </div>
         </div>
     </div>

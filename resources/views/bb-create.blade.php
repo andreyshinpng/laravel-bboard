@@ -23,7 +23,7 @@
                         @error('content')
                         <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
-                        <input type="text" name="content">
+                        <input type="text" name="content"></input>
                     </div>
                     <div class="row">
                         <label for="price">Цена</label><br>

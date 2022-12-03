@@ -8,7 +8,7 @@
     <main>
         <div class="container">
             <div class="content">
-                <h1>Доска объявлений</h1>
+                <h2>Доска объявлений</h2>
                 @if ( count($bbs) )
                     <table class="bb-table">
                         <tr>

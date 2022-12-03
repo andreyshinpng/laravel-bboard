@@ -8,7 +8,8 @@
     <main>
         <div class="container">
             <div class="content">
-                <h1>Мои объявления</h1>
+                <h1>Привет, {{ ucfirst(Auth::user()->name)}}.</h1>
+                <h2 style="margin-bottom: 12px;">Ваши объявления</h2>
                 <a href="{{ route('bb.create') }}" class="btn">Создать объявление</a>
                 @if ( count($bbs) )
                     <table class="bb-table">
