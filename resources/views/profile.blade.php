@@ -16,13 +16,13 @@
                         <tr>
                             <td>Название</td>
                             <td>Описание</td>
-                            <td>Цена, руб</td>
+                            <td>Цена, $</td>
                         </tr>
                         @foreach ($bbs as $bb)
                             <tr>
-                                <td><h4>{{ $bb->title }}</h4></td>
+                                <td><h4><a href="{{ route('bb.detail', ['bb' => $bb]) }}">{{ $bb->title }}</a></h4></td>
                                 <td>{{ $bb->content }}</td>
-                                <td>{{ $bb->price }}</td>
+                                <td>${{ $bb->price }}</td>
                                 <td><a href="{{ route('bb.edit', ['bb' => $bb]) }}">Редактировать</a></td>
                                 <td><a href="{{ route('bb.delete', ['bb' => $bb]) }}">Удалить</a></td>
                             </tr>

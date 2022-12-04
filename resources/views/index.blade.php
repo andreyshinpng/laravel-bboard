@@ -15,15 +15,15 @@
                             <td>Название</td>
                             <td>Описание</td>
                             <td>Продавец</td>
-                            <td>Цена, руб</td>
+                            <td>Цена, $</td>
                         </tr>
                         @foreach ($bbs as $bb)
                             <tr>
-                                <td><h4>{{ $bb->title }}</h4></td>
+                                <td><h4><a href="{{ route('bb.detail', ['bb' => $bb]) }}">{{ $bb->title }}</a></h4></td>
                                 <td>{{ $bb->content }}</td>
                                 <td><a href="{{ route('userBbs', ['user' => $bb->user->id]) }}">{{ $bb->user->name }}</a></td>
-                                <td>{{ $bb->price }}</td>
-                                <td><a href="{{ route('detail', ['bb' => $bb->id]) }}">Подробнее</a></td>
+                                <td>${{ $bb->price }}</td>
+                                <td><a href="{{ route('bb.detail', ['bb' => $bb->id]) }}">Подробнее</a></td>
                             </tr>
                         @endforeach
                     </table>

@@ -14,9 +14,12 @@
                     <p>Описание: {{ $bb->content }}
                     <p>Продавец: {{ $bb->user->name }}</p>
                     <br>
-                    <p>Цена: {{ $bb->price }} руб</p>
+                    <p>Цена: {{ $bb->price }} $</p>
                     <br>
-                    <a href="{{ route('home') }}">Вернуться на главную</a>
+                    <a href="{{ route('home') }}">Все объявления</a>
+                    @auth
+                        <a href="{{ route('profile') }}"> | Мои объявления</a>
+                    @endauth
                 </div>
             </div>
         </div>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\BbsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', [BbsController::class, 'index'])->name('home');
-Route::get('/bbs/{bb}', [BbsController::class, 'detail'])->name('detail');
+Route::get('/bbs/{bb}', [BbsController::class, 'detail'])->name('bb.detail');
 Route::get('/users/{user}', [UserController::class, 'userBbs'])->name('userBbs');
 
 Route::get('/profile', [HomeController::class, 'index'])->name('profile');
