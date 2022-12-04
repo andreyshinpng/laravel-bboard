@@ -13,7 +13,7 @@ class Bb extends Model
     protected $fillable = ['title', 'content', 'price'];
 
     /**
-     * Обратная связь
+     * Возвращает объект записи первичной таблицы
      * @param void
      * @return BelongsTo
      */
