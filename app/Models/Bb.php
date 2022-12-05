@@ -19,11 +19,11 @@ class Bb extends Model
      */
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class)->withDefault(['name' => 'No name']);
     }
 
     public function category()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(Category::class)->withDefault(['name' => 'No category']);
     }
 }
