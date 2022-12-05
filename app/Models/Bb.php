@@ -10,7 +10,7 @@ class Bb extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'content', 'price'];
+    protected $fillable = ['title', 'content', 'price', 'category_id'];
 
     /**
      * Возвращает объект обратной связи

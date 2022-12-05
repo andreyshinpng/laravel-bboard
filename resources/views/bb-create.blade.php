@@ -19,6 +19,13 @@
                         <input type="text" name="title">
                     </div>
                     <div class="row">
+                        <label for="title">Категория</label><br>
+                        @error('category_id')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                        <input type="text" name="category_id">
+                    </div>
+                    <div class="row">
                         <label for="content">Описание</label><br>
                         @error('content')
                         <div class="invalid-feedback">{{ $message }}</div>

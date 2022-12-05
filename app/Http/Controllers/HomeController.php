@@ -10,6 +10,7 @@ class HomeController extends Controller
 {
     private const BB_VALIDATOR = [
         'title' => 'required|max:50',
+        'category_id' => 'required|numeric',
         'content' => 'required|max:255',
         'price' => 'required|numeric'
     ];
@@ -46,6 +47,7 @@ class HomeController extends Controller
         $validated = $request->validate(self::BB_VALIDATOR);
         Auth::user()->bbs()->create([
             'title' => $validated['title'],
+            'category_id' => $validated['category_id'],
             'content' => $validated['content'],
             'price' => $validated['price'],
             'user_id' => Auth::user()->id
@@ -63,6 +65,7 @@ class HomeController extends Controller
         $validated = $request->validate(self::BB_VALIDATOR);
         $bb->fill([
             'title' => $validated['title'],
+            'category_id' => $validated['category_id'],
             'content' => $validated['content'],
             'price' => $validated['price']
         ]);
