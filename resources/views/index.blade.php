@@ -14,6 +14,7 @@
                         <tr>
                             <td>Название</td>
                             <td>Описание</td>
+                            <td>Категория</td>
                             <td>Продавец</td>
                             <td>Цена, $</td>
                         </tr>
@@ -21,9 +22,9 @@
                             <tr>
                                 <td><h4><a href="{{ route('bb.detail', ['bb' => $bb]) }}">{{ $bb->title }}</a></h4></td>
                                 <td>{{ $bb->content }}</td>
-                                <td><a href="{{ route('userBbs', ['user' => $bb->user->id]) }}">{{ $bb->user->name }}</a></td>
+                                <td><a href="{{ route('category.bbs', ['category' => $bb->category->id]) }}">{{ $bb->category->name }}</a></td>
+                                <td><a href="{{ route('user.bbs', ['user' => $bb->user->id]) }}">{{ $bb->user->name }}</a></td>
                                 <td>${{ $bb->price }}</td>
-                                <td><a href="{{ route('bb.detail', ['bb' => $bb->id]) }}">Подробнее</a></td>
                             </tr>
                         @endforeach
                     </table>

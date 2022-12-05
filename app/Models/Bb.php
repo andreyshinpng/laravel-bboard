@@ -13,12 +13,17 @@ class Bb extends Model
     protected $fillable = ['title', 'content', 'price'];
 
     /**
-     * Возвращает объект записи первичной таблицы
+     * Возвращает объект обратной связи
      * @param void
      * @return BelongsTo
      */
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
     }
 }

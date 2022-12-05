@@ -23,7 +23,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('lol123')
         ]);
 
-        for ($i = 0; $i <= 10; $i++) {
+        for ($i = 1; $i <= 10; $i++) {
             User::create([
                 'name' => fake()->firstName . " " . fake()->lastName,
                 'email' => fake()->email,

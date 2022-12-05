@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BbsController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
@@ -21,7 +22,8 @@ Auth::routes();
 
 Route::get('/', [BbsController::class, 'index'])->name('home');
 Route::get('/bbs/{bb}', [BbsController::class, 'detail'])->name('bb.detail');
-Route::get('/users/{user}', [UserController::class, 'userBbs'])->name('userBbs');
+Route::get('/users/{user}', [UserController::class, 'userBbs'])->name('user.bbs');;
+Route::get('/categories/{category}', [CategoryController::class, 'categoryBbs'])->name('category.bbs');
 
 Route::get('/profile', [HomeController::class, 'index'])->name('profile');
 Route::get('/profile/create', [HomeController::class, 'create'])->name('bb.create');
